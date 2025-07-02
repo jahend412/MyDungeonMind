@@ -65,9 +65,9 @@ app.use((req, res, next) => {
 // 2. Mount Routes
 
 //  Error handling   * This is a catch-all route handler
-app.all("*", (req, res, next) => {
-  next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
-});
+// app.all("*", (req, res, next) => {
+//   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
+// });
 
 //  Global error handling middleware
 app.use(globalErrorHandler);
